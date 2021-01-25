@@ -28,6 +28,13 @@
         <param-value>/home/dev/EFT_DOCUMENTS/EFT_UPLOAD/</param-value>
         <!--<param-value>E:\EFT_DOCUMENTS\EFT_UPLOAD\</param-value>-->
     </context-param>
+        
+    <context-param>
+        <description>Scanned Image Skipped Path</description>
+        <param-name>imgPathSkip</param-name>
+        <param-value>/home/dev/EFT_DOCUMENTS/EFT_SKIP/</param-value>
+        <!--<param-value>E:\EFT_DOCUMENTS\EFT_UPLOAD\</param-value>-->
+    </context-param>
     
     <welcome-file-list>
         <welcome-file>/login.jsp</welcome-file>

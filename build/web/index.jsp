@@ -21,7 +21,10 @@
                 <div class="col-1">
                     <p><a href="./Logout" class="btn btn-sm btn-danger" tabindex="-1">Logout</a></p>
                     <p>&nbsp;</p>
-                    <p>&nbsp;</p>
+                    <form action="./SkipFolder" method="POST" onsubmit="return checkSkipImage();">
+                        <input type="hidden" valeu="" name="folderPath" id="folderPath"/>
+                        <input type="submit" class="btn btn-sm btn-danger" tabindex="-2" value="Skip" />
+                    </form>
                     <p>
                     <div class="form-group">
                         <label for="docType"><b>IMAGE TYPE</b></label>
@@ -463,6 +466,16 @@
     <script type="text/javascript">
                                         var imageList = [];
                                         var memberCount = 0;
+                                        
+                                        function checkSkipImage(){
+                                            if(confirm("Are you sure you want to skip this folder ?")){
+                                                $("#folderPath").val($("#folder").val());
+                                                return true;
+                                            }else{
+                                                return false;
+                                            }
+                                        }
+                                        
                                         function doChangeSelect(str) {
                                             $(".loader").show();
                                             $(".entryCard").hide();
